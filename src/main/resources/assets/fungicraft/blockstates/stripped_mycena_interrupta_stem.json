@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "fungicraft:block/stripped_mycena_interrupta_stem",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "fungicraft:block/stripped_mycena_interrupta_stem"
+    },
+    "axis=z": {
+      "model": "fungicraft:block/stripped_mycena_interrupta_stem",
+      "x": 90
+    }
+  }
+}

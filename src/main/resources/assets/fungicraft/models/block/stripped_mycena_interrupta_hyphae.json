@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "fungicraft:block/stripped_mycena_interrupta_stem",
+    "side": "fungicraft:block/stripped_mycena_interrupta_stem"
+  }
+}

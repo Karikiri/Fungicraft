@@ -25,9 +25,21 @@ public class ModBlocks {
 
     //Soil Registry
 
-    //Mushroom Block Registry
+    //Mycena Interrupta Block Registry
     public static final RegistryObject<Block> MYCENA_INTERRUPTA_STEM = registerBlock("mycena_interrupta_stem",
-            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_LOG))));
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.CRIMSON_STEM))));
+
+    public static final RegistryObject<Block> STRIPPED_MYCENA_INTERRUPTA_STEM = registerBlock("stripped_mycena_interrupta_stem",
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.STRIPPED_CRIMSON_STEM))));
+
+    public static final RegistryObject<Block> MYCENA_INTERRUPTA_HYPHAE = registerBlock("mycena_interrupta_hyphae",
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.CRIMSON_HYPHAE))));
+
+    public static final RegistryObject<Block> STRIPPED_MYCENA_INTERRUPTA_HYPHAE = registerBlock("stripped_mycena_interrupta_hyphae",
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.STRIPPED_CRIMSON_HYPHAE))));
+
+    public static final RegistryObject<Block> MYCENA_INTERRUPTA_PLANKS = registerBlock("mycena_interrupta_planks",
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.CRIMSON_PLANKS))));
 
     //When register a block, register an item simultaneously
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
