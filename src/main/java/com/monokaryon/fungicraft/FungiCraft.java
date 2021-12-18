@@ -57,7 +57,7 @@ public class FungiCraft
     private void setup(final FMLCommonSetupEvent event)
     {
         event.enqueueWork(() -> {
-            AxeItem.BLOCK_STRIPPING_MAP = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.BLOCK_STRIPPING_MAP)
+            AxeItem.STRIPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPABLES)
                     .put(ModBlocks.MYCENA_INTERRUPTA_STEM.get(),
                             ModBlocks.STRIPPED_MYCENA_INTERRUPTA_STEM.get())
                     .put(ModBlocks.MYCENA_INTERRUPTA_HYPHAE.get(),
@@ -67,8 +67,10 @@ public class FungiCraft
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
-            RenderTypeLookup.setRenderLayer(ModBlocks.MYCENA_INTERRUPTA_CAP.get(), RenderType.getTranslucent());
-            RenderTypeLookup.setRenderLayer(ModBlocks.MYCENA_INTERRUPTA_SAPLING.get(), RenderType.getCutout());
+            //Translucent Mushroom Cap
+            RenderTypeLookup.setRenderLayer(ModBlocks.MYCENA_INTERRUPTA_CAP.get(), RenderType.translucent());
+
+            RenderTypeLookup.setRenderLayer(ModBlocks.MYCENA_INTERRUPTA_SAPLING.get(), RenderType.cutout());
         });
     }
 

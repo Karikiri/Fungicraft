@@ -13,7 +13,7 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, FungiCraft.MOD_ID);
 
     public static final RegistryObject<Item> SEAGRASS_POWDER = ITEMS.register("seagrass_powder",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FUNGICRAFT_GROUP)));
+            () -> new Item(new Item.Properties().tab(ModItemGroup.FUNGICRAFT_GROUP)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

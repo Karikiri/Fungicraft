@@ -8,7 +8,7 @@ public class ModItemGroup {
     public static final ItemGroup FUNGICRAFT_GROUP = new ItemGroup("fungicraftModTab") {
 
         @Override
-        public ItemStack createIcon()
+        public ItemStack makeIcon()
         {
             return new ItemStack(ModItems.SEAGRASS_POWDER.get());
         }
