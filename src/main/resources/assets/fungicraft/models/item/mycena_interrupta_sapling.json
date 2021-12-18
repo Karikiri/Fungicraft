@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "fungicraft:block/mycena_interrupta_sapling"
+  }
+}

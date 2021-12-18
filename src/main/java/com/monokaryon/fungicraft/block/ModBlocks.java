@@ -1,13 +1,12 @@
 package com.monokaryon.fungicraft.block;
 
 import com.monokaryon.fungicraft.FungiCraft;
+import com.monokaryon.fungicraft.block.custom.MycenaInterruptaTree;
 import com.monokaryon.fungicraft.item.ModItemGroup;
 import com.monokaryon.fungicraft.item.ModItems;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.RotatedPillarBlock;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.trees.OakTree;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.ToolType;
@@ -26,20 +25,34 @@ public class ModBlocks {
     //Soil Registry
 
     //Mycena Interrupta Block Registry
-    public static final RegistryObject<Block> MYCENA_INTERRUPTA_STEM = registerBlock("mycena_interrupta_stem",
-            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.CRIMSON_STEM))));
+    public static final RegistryObject<Block> MYCENA_INTERRUPTA_STEM =
+            registerBlock("mycena_interrupta_stem",
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_LOG))));
 
-    public static final RegistryObject<Block> STRIPPED_MYCENA_INTERRUPTA_STEM = registerBlock("stripped_mycena_interrupta_stem",
-            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.STRIPPED_CRIMSON_STEM))));
+    public static final RegistryObject<Block> STRIPPED_MYCENA_INTERRUPTA_STEM =
+            registerBlock("stripped_mycena_interrupta_stem",
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_LOG))));
 
-    public static final RegistryObject<Block> MYCENA_INTERRUPTA_HYPHAE = registerBlock("mycena_interrupta_hyphae",
-            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.CRIMSON_HYPHAE))));
+    public static final RegistryObject<Block> MYCENA_INTERRUPTA_HYPHAE =
+            registerBlock("mycena_interrupta_hyphae",
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_WOOD))));
 
-    public static final RegistryObject<Block> STRIPPED_MYCENA_INTERRUPTA_HYPHAE = registerBlock("stripped_mycena_interrupta_hyphae",
-            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.STRIPPED_CRIMSON_HYPHAE))));
+    public static final RegistryObject<Block> STRIPPED_MYCENA_INTERRUPTA_HYPHAE =
+            registerBlock("stripped_mycena_interrupta_hyphae",
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_WOOD))));
 
-    public static final RegistryObject<Block> MYCENA_INTERRUPTA_PLANKS = registerBlock("mycena_interrupta_planks",
-            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.CRIMSON_PLANKS))));
+    public static final RegistryObject<Block> MYCENA_INTERRUPTA_PLANKS =
+            registerBlock("mycena_interrupta_planks",
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_PLANKS))));
+
+    public static final RegistryObject<Block> MYCENA_INTERRUPTA_CAP =
+            registerBlock("mycena_interrupta_cap",
+            () -> new LeavesBlock((AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(2f)
+                    .tickRandomly().sound(SoundType.NETHER_WART).notSolid())));
+
+    public static final RegistryObject<Block> MYCENA_INTERRUPTA_SAPLING =
+            registerBlock("mycena_interrupta_sapling",
+            () -> new SaplingBlock(new MycenaInterruptaTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));
 
     //When register a block, register an item simultaneously
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {

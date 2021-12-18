@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "fungicraft:block/mycena_interrupta_cap"
+  }
+}
