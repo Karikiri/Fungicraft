@@ -47,7 +47,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> MYCENA_INTERRUPTA_CAP =
             registerBlock("mycena_interrupta_cap",
-            () -> new LeavesBlock((AbstractBlock.Properties.of(Material.GLASS).strength(2f)
+            () -> new Block((AbstractBlock.Properties.of(Material.WOOD).strength(2f)
                     .randomTicks().sound(SoundType.NETHER_WART).noOcclusion())));
 
     public static final RegistryObject<Block> MYCENA_INTERRUPTA_SAPLING =
