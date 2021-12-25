@@ -11,11 +11,11 @@ import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 
 public class ModConfiguredSurfaceBuilders {
 
-    public static ConfiguredSurfaceBuilder<?> FUNGI_FOREST = register("fungi_forest",
-            SurfaceBuilder.SWAMP.configured(new SurfaceBuilderConfig(
+    public static ConfiguredSurfaceBuilder<?> MYCENA_FOREST_SURFACE = register("mycena_forest_surface",
+            SurfaceBuilder.DEFAULT.configured(new SurfaceBuilderConfig(
+                    Blocks.GRASS_BLOCK.defaultBlockState(),
                     Blocks.DIRT.defaultBlockState(),
-                    Blocks.WATER.defaultBlockState(),
-                    Blocks.COAL_ORE.defaultBlockState()
+                    Blocks.STONE.defaultBlockState()
             )));
 
     private static <SC extends ISurfaceBuilderConfig>ConfiguredSurfaceBuilder<SC> register(String name,

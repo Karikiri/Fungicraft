@@ -3,10 +3,9 @@ package com.monokaryon.fungicraft;
 import com.google.common.collect.ImmutableMap;
 import com.monokaryon.fungicraft.block.ModBlocks;
 import com.monokaryon.fungicraft.item.ModItems;
-import com.monokaryon.fungicraft.world.biome.ModBiomes;
-import com.monokaryon.fungicraft.world.gen.ModConfiguredFeatures;
+import com.monokaryon.fungicraft.world.biome.BiomeRegistry;
+import com.monokaryon.fungicraft.world.gen.ModBiomeGenaration;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.AxeItem;
@@ -25,8 +24,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.stream.Collectors;
-
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(FungiCraft.MOD_ID)
 public class FungiCraft
@@ -43,7 +40,7 @@ public class FungiCraft
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
-        ModBiomes.register(eventBus);
+        BiomeRegistry.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -65,6 +62,8 @@ public class FungiCraft
                             ModBlocks.STRIPPED_PIXIE_PARASOL_STEM.get())
                     .put(ModBlocks.PIXIE_PARASOL_HYPHAE.get(),
                             ModBlocks.STRIPPED_PIXIE_PARASOL_HYPHAE.get()).build();
+
+            ModBiomeGenaration.generateBiomes();
         });
     }
 
