@@ -3,6 +3,7 @@ package com.monokaryon.fungicraft;
 import com.google.common.collect.ImmutableMap;
 import com.monokaryon.fungicraft.block.ModBlocks;
 import com.monokaryon.fungicraft.item.ModItems;
+import com.monokaryon.fungicraft.world.biome.ModBiomes;
 import com.monokaryon.fungicraft.world.gen.ModConfiguredFeatures;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -42,6 +43,8 @@ public class FungiCraft
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
+        ModBiomes.register(eventBus);
+
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
         eventBus.addListener(this::enqueueIMC);
@@ -58,19 +61,19 @@ public class FungiCraft
     {
         event.enqueueWork(() -> {
             AxeItem.STRIPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPABLES)
-                    .put(ModBlocks.MYCENA_INTERRUPTA_STEM.get(),
-                            ModBlocks.STRIPPED_MYCENA_INTERRUPTA_STEM.get())
-                    .put(ModBlocks.MYCENA_INTERRUPTA_HYPHAE.get(),
-                            ModBlocks.STRIPPED_MYCENA_INTERRUPTA_HYPHAE.get()).build();
+                    .put(ModBlocks.PIXIE_PARASOL_STEM.get(),
+                            ModBlocks.STRIPPED_PIXIE_PARASOL_STEM.get())
+                    .put(ModBlocks.PIXIE_PARASOL_HYPHAE.get(),
+                            ModBlocks.STRIPPED_PIXIE_PARASOL_HYPHAE.get()).build();
         });
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
             //Translucent Mushroom Cap
-            RenderTypeLookup.setRenderLayer(ModBlocks.MYCENA_INTERRUPTA_CAP.get(), RenderType.translucent());
+            RenderTypeLookup.setRenderLayer(ModBlocks.PIXIE_PARASOL_CAP.get(), RenderType.translucent());
 
-            RenderTypeLookup.setRenderLayer(ModBlocks.MYCENA_INTERRUPTA_SAPLING.get(), RenderType.cutout());
+            RenderTypeLookup.setRenderLayer(ModBlocks.PIXIE_PARASOL_SAPLING.get(), RenderType.cutout());
         });
     }
 

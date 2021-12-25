@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "fungicraft:block/pixie_parasol_sapling"
+  }
+}

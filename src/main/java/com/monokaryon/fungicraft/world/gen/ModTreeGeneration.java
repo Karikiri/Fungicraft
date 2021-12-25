@@ -1,6 +1,6 @@
 package com.monokaryon.fungicraft.world.gen;
 
-import com.monokaryon.fungicraft.block.custom.MycenaInterruptaTree;
+import com.monokaryon.fungicraft.world.tree.PixieParasolTree;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
@@ -19,16 +19,16 @@ import java.util.function.Supplier;
 
 public class ModTreeGeneration {
     public static void generateTrees(final BiomeLoadingEvent event) {
-        MycenaInterruptaTree mycenaInterruptaTree = new MycenaInterruptaTree();
+        PixieParasolTree pixieParasolTree = new PixieParasolTree();
         Random random = new Random();
 
         RegistryKey<Biome> key = RegistryKey.create(Registry.BIOME_REGISTRY, event.getName());
         Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
 
-        if(types.contains(BiomeDictionary.Type.PLAINS)) {
+        if(types.contains(BiomeDictionary.Type.FOREST)) {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
-            base.add(() -> ModConfiguredFeatures.MYCENA_INTERRUPTA
+            base.add(() -> ModConfiguredFeatures.PIXIE_PARASOL
                     .decorated(Features.Placements.HEIGHTMAP)
                     .decorated(Placement.COUNT_EXTRA.configured(
                             new AtSurfaceWithExtraConfig(1, 0.25f, 2))));

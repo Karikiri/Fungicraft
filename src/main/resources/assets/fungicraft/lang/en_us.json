@@ -1,11 +1,11 @@
 {
   "item.fungicraft.seagrass_powder": "Seagrass Powder",
 
-  "block.fungicraft.mycena_interrupta_stem": "Pixie's Parasol Stem",
-  "block.fungicraft.stripped_mycena_interrupta_stem": "Stripped Pixie's Parasol Stem",
-  "block.fungicraft.mycena_interrupta_hyphae": "Pixie's Parasol Hyphae",
-  "block.fungicraft.stripped_mycena_interrupta_hyphae": "Stripped Pixie's Parasol Hyphae",
-  "block.fungicraft.mycena_interrupta_planks": "Pixie's Parasol Planks",
+  "block.fungicraft.pixie_parasol_stem": "Pixie's Parasol Stem",
+  "block.fungicraft.stripped_pixie_parasol_stem": "Stripped Pixie's Parasol Stem",
+  "block.fungicraft.pixie_parasol_hyphae": "Pixie's Parasol Hyphae",
+  "block.fungicraft.stripped_pixie_parasol_hyphae": "Stripped Pixie's Parasol Hyphae",
+  "block.fungicraft.pixie_parasol_planks": "Pixie's Parasol Planks",
 
   "itemGroup.fungicraftModTab": "Fungi Craft"
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "fungicraft:block/pixie_parasol_stem_top",
+    "side": "fungicraft:block/pixie_parasol_stem"
+  }
+}

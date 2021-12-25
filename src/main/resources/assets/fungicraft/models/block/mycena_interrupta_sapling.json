@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "fungicraft:block/mycena_interrupta_sapling"
-  }
-}

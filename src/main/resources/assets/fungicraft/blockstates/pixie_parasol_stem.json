@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "fungicraft:block/pixie_parasol_stem",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "fungicraft:block/pixie_parasol_stem"
+    },
+    "axis=z": {
+      "model": "fungicraft:block/pixie_parasol_stem",
+      "x": 90
+    }
+  }
+}
