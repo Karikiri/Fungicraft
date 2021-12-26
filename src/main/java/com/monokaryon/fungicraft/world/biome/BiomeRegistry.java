@@ -9,6 +9,7 @@ import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.biome.*;
+import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 import net.minecraftforge.client.event.sound.SoundEvent;
@@ -24,7 +25,7 @@ public class BiomeRegistry {
             = DeferredRegister.create(ForgeRegistries.BIOMES, FungiCraft.MOD_ID);
 
     public static final RegistryObject<Biome> MYCENA_FOREST = BIOMES.register("mycena_forest",
-            () -> makeMycenaForestBiome(() -> ModConfiguredSurfaceBuilders.MYCENA_FOREST_SURFACE, 0.125f, 0.05f));
+            () -> makeMycenaForestBiome(() -> ModConfiguredSurfaceBuilders.MYCENA_FOREST_SURFACE, 0.5f, 0.05f));
 
     private static Biome makeMycenaForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder,
                                               float depth, float scale) {
@@ -39,28 +40,31 @@ public class BiomeRegistry {
                 new MobSpawnInfo.Spawners(EntityType.SLIME, 100, 7, 10));
         mobspawninfo$builder.addSpawn(EntityClassification.CREATURE,
                 new MobSpawnInfo.Spawners(EntityType.FOX, 10, 0, 1));
-
+        DefaultBiomeFeatures.addDefaultMonsterRoom(biomegenerationsettings$builder);
 
 
         //Structure
-        DefaultBiomeFeatures.addDefaultCarvers(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.addDefaultMonsterRoom(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.addDefaultOverworldLandStructures(biomegenerationsettings$builder);
         DefaultBiomeFeatures.addDefaultLakes(biomegenerationsettings$builder);
         DefaultBiomeFeatures.addDefaultSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.addDefaultOres(biomegenerationsettings$builder);
         DefaultBiomeFeatures.addDefaultUndergroundVariety(biomegenerationsettings$builder);
 
-
         //Plants
         DefaultBiomeFeatures.addForestFlowers(biomegenerationsettings$builder);
         DefaultBiomeFeatures.addBerryBushes(biomegenerationsettings$builder);
         DefaultBiomeFeatures.addDefaultGrass(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.addDefaultMushrooms(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.addDefaultExtraVegetation(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.addMountainTrees(biomegenerationsettings$builder);
+        biomegenerationsettings$builder.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModConfiguredFeatures.TREES_PIXIE_PARASOL);
+        //DefaultBiomeFeatures.addBirchTrees(biomegenerationsettings$builder);
 
         //testing
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).biomeCategory(Biome.Category.FOREST)
                 .depth(depth).scale(scale).temperature(0.7F).downfall(0.8F)
-                .specialEffects((new BiomeAmbience.Builder()).waterColor(-6704052).waterFogColor(-13287653)
-                        .fogColor(-13287653).skyColor(-5714892).grassColorOverride(-4823776)
+                .specialEffects((new BiomeAmbience.Builder()).waterColor(6920692).waterFogColor(12237047)
+                        .fogColor(12237047).skyColor(13677305).grassColorOverride(11858412)
                         .ambientParticle(new ParticleEffectAmbience(ParticleTypes.UNDERWATER, 0.003f))
                         .backgroundMusic(BackgroundMusicTracks.createGameMusic(SoundEvents.MUSIC_GAME))
                         .build())

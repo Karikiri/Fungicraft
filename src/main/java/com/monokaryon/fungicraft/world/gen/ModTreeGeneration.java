@@ -19,20 +19,20 @@ import java.util.function.Supplier;
 
 public class ModTreeGeneration {
     public static void generateTrees(final BiomeLoadingEvent event) {
-        PixieParasolTree pixieParasolTree = new PixieParasolTree();
-        Random random = new Random();
 
         RegistryKey<Biome> key = RegistryKey.create(Registry.BIOME_REGISTRY, event.getName());
         Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
 
-        if(types.contains(BiomeDictionary.Type.FOREST)) {
+        if(types.contains(BiomeDictionary.Type.HOT)
+                && types.contains(BiomeDictionary.Type.WET)
+                && types.contains(BiomeDictionary.Type.WET)) {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
             base.add(() -> ModConfiguredFeatures.PIXIE_PARASOL
                     .decorated(Features.Placements.HEIGHTMAP)
                     .decorated(Placement.COUNT_EXTRA.configured(
-                            new AtSurfaceWithExtraConfig(1, 0.25f, 2))));
+                            new AtSurfaceWithExtraConfig(1, 0.25f, 1))));
         }
     }
 }
