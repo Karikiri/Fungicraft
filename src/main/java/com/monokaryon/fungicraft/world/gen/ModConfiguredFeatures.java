@@ -18,6 +18,7 @@ public class ModConfiguredFeatures {
                             new StraightTrunkPlacer(4, 2, 0),
                             new TwoLayerFeature(1, 0, 1))).ignoreVines().build()));
 
+
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String p_243968_0_, ConfiguredFeature<FC, ?> p_243968_1_) {
         return (ConfiguredFeature) Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, p_243968_0_, p_243968_1_);
     }

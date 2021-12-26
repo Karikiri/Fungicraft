@@ -28,6 +28,7 @@ public class ModTreeGeneration {
         if(types.contains(BiomeDictionary.Type.FOREST)) {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
+
             base.add(() -> ModConfiguredFeatures.PIXIE_PARASOL
                     .decorated(Features.Placements.HEIGHTMAP)
                     .decorated(Placement.COUNT_EXTRA.configured(
