@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "fungicraft:frosty_bonnet_stem"
+    }
+  ],
+  "result": {
+    "item": "fungicraft:frosty_bonnet_planks",
+    "count": 4
+  }
+}

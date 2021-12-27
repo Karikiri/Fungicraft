@@ -7,6 +7,7 @@
   "block.fungicraft.stripped_pixie_parasol_hyphae": "Stripped Pixie's Parasol Hyphae",
   "block.fungicraft.pixie_parasol_cap": "Pixie's Parasol Cap",
   "block.fungicraft.pixie_parasol_fungus": "Pixie's Parasol Fungus",
+  "block.fungicraft.pixie_parasol_planks": "Pixie's Parasol Planks",
 
   "block.fungicraft.frosty_bonnet_stem": "Frosty Bonnet Stem",
   "block.fungicraft.stripped_frosty_bonnet_stem": "Stripped Frosty Bonnet Stem",
@@ -14,6 +15,7 @@
   "block.fungicraft.stripped_frosty_bonnet_hyphae": "Stripped Frosty Bonnet Hyphae",
   "block.fungicraft.frosty_bonnet_cap": "Frosty Bonnet Cap",
   "block.fungicraft.frosty_bonnet_fungus": "Frosty Bonnet Fungus",
+  "block.fungicraft.frosty_bonnet_planks": "Frosty Bonnet Planks",
 
   "block.fungicraft.yellowleg_bonnet_stem": "Yellowleg Bonnet Stem",
   "block.fungicraft.stripped_yellowleg_bonnet_stem": "Stripped Yellowleg Bonnet Stem",
@@ -21,6 +23,7 @@
   "block.fungicraft.stripped_yellowleg_bonnet_hyphae": "Stripped Yellowleg Bonnet Hyphae",
   "block.fungicraft.yellowleg_bonnet_cap": "Yellowleg Bonnet Cap",
   "block.fungicraft.yellowleg_bonnet_fungus": "Yellowleg Bonnet Fungus",
+  "block.fungicraft.yellowleg_bonnet_planks": "Yellowleg Bonnet Planks",
 
   "itemGroup.fungicraftModTab": "Fungi Craft"
 }
