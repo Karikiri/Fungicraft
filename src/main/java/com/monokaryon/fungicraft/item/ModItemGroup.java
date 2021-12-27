@@ -10,7 +10,7 @@ public class ModItemGroup {
         @Override
         public ItemStack makeIcon()
         {
-            return new ItemStack(ModItems.KELP_POWDER.get());
+            return new ItemStack(ModItems.AGAR_POWDER.get());
         }
     };
 }

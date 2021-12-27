@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "fungicraft:pixie_parasol_planks"
+    "fungicraft:pixie_parasol_cap",
+    "fungicraft:frosty_bonnet_cap",
+    "fungicraft:yellowleg_bonnet_cap"
   ]
 }

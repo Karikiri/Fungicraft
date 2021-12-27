@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "fungicraft:pixie_parasol_stem"
+    "fungicraft:pixie_parasol_stem",
+    "fungicraft:frosty_bonnet_stem",
+    "fungicraft:yellowleg_bonnet_stem"
   ]
 }

@@ -57,8 +57,8 @@ public class BiomeRegistry {
         DefaultBiomeFeatures.addDefaultMushrooms(biomegenerationsettings$builder);
         DefaultBiomeFeatures.addDefaultExtraVegetation(biomegenerationsettings$builder);
         DefaultBiomeFeatures.addMountainTrees(biomegenerationsettings$builder);
-        biomegenerationsettings$builder.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModConfiguredFeatures.TREES_PIXIE_PARASOL);
-        //DefaultBiomeFeatures.addBirchTrees(biomegenerationsettings$builder);
+        biomegenerationsettings$builder.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModConfiguredFeatures.HUGE_MYCENA_FUNGI);
+
 
         //testing
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).biomeCategory(Biome.Category.FOREST)

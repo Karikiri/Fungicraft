@@ -9,11 +9,11 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class PixieParasolTree extends Tree {
+public class HugeYellowlegBonnet extends Tree {
 
     @Nullable
     @Override
     protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getConfiguredFeature(Random random, boolean b) {
-        return ModConfiguredFeatures.PIXIE_PARASOL;
+        return ModConfiguredFeatures.Yellowleg_BONNET;
     }
 }

@@ -63,23 +63,43 @@ public class FungiCraft
                     .put(ModBlocks.PIXIE_PARASOL_HYPHAE.get(),
                             ModBlocks.STRIPPED_PIXIE_PARASOL_HYPHAE.get()).build();
 
+            AxeItem.STRIPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPABLES)
+                    .put(ModBlocks.FROSTY_BONNET_STEM.get(),
+                            ModBlocks.STRIPPED_FROSTY_BONNET_STEM.get())
+                    .put(ModBlocks.FROSTY_BONNET_HYPHAE.get(),
+                            ModBlocks.STRIPPED_FROSTY_BONNET_HYPHAE.get()).build();
+
+            AxeItem.STRIPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPABLES)
+                    .put(ModBlocks.YELLOWLEG_BONNET_STEM.get(),
+                            ModBlocks.STRIPPED_YELLOWLEG_BONNET_STEM.get())
+                    .put(ModBlocks.YELLOWLEG_BONNET_HYPHAE.get(),
+                            ModBlocks.STRIPPED_YELLOWLEG_BONNET_HYPHAE.get()).build();
+
             ModBiomeGenaration.generateBiomes();
         });
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
-            //Translucent Mushroom Cap
+            //Mycena Renderring
             RenderTypeLookup.setRenderLayer(ModBlocks.PIXIE_PARASOL_CAP.get(), RenderType.translucent());
+            RenderTypeLookup.setRenderLayer(ModBlocks.PIXIE_PARASOL_STEM.get(), RenderType.translucent());
+            RenderTypeLookup.setRenderLayer(ModBlocks.PIXIE_PARASOL_FUNGUS.get(), RenderType.cutout());
 
-            RenderTypeLookup.setRenderLayer(ModBlocks.PIXIE_PARASOL_SAPLING.get(), RenderType.cutout());
+            RenderTypeLookup.setRenderLayer(ModBlocks.FROSTY_BONNET_CAP.get(), RenderType.translucent());
+            RenderTypeLookup.setRenderLayer(ModBlocks.FROSTY_BONNET_STEM.get(), RenderType.translucent());
+            RenderTypeLookup.setRenderLayer(ModBlocks.FROSTY_BONNET_FUNGUS.get(), RenderType.cutout());
+
+            RenderTypeLookup.setRenderLayer(ModBlocks.YELLOWLEG_BONNET_CAP.get(), RenderType.translucent());
+            RenderTypeLookup.setRenderLayer(ModBlocks.YELLOWLEG_BONNET_STEM.get(), RenderType.translucent());
+            RenderTypeLookup.setRenderLayer(ModBlocks.YELLOWLEG_BONNET_FUNGUS.get(), RenderType.cutout());
         });
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
     {
         // some example code to dispatch IMC to another mod
-        InterModComms.sendTo("examplemod", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
+        InterModComms.sendTo(FungiCraft.MOD_ID, "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
     }
 
     private void processIMC(final InterModProcessEvent event)

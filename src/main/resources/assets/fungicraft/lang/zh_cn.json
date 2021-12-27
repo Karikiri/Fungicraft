@@ -1,0 +1,12 @@
+{
+  "item.fungicraft.agar_powder": "琼脂粉沫",
+
+  "block.fungicraft.pixie_parasol_stem": "炫蓝蘑菇菌柄",
+  "block.fungicraft.stripped_pixie_parasol_stem": "去皮炫蓝蘑菇菌柄",
+  "block.fungicraft.pixie_parasol_hyphae": "炫蓝蘑菇菌核",
+  "block.fungicraft.stripped_pixie_parasol_hyphae": "去皮炫蓝蘑菇菌核",
+  "block.fungicraft.pixie_parasol_cap": "炫蓝蘑菇菌盖",
+  "block.fungicraft.pixie_parasol_fungus": "炫蓝蘑菇",
+
+  "itemGroup.fungicraftModTab": "真菌模组"
+}

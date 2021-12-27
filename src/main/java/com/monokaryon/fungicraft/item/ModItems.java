@@ -12,7 +12,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, FungiCraft.MOD_ID);
 
-    public static final RegistryObject<Item> KELP_POWDER = ITEMS.register("kelp_powder",
+    public static final RegistryObject<Item> AGAR_POWDER = ITEMS.register("agar_powder",
             () -> new Item(new Item.Properties().tab(ModItemGroup.FUNGICRAFT_GROUP)));
 
     public static void register(IEventBus eventBus) {
