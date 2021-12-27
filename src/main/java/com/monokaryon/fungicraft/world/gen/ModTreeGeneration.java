@@ -7,6 +7,7 @@ import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
+import net.minecraft.world.gen.placement.ChanceConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
@@ -21,14 +22,32 @@ public class ModTreeGeneration {
         RegistryKey<Biome> key = RegistryKey.create(Registry.BIOME_REGISTRY, event.getName());
         Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
 
-        if(types.contains(BiomeDictionary.Type.HOT) && types.contains(BiomeDictionary.Type.WET) && types.contains(BiomeDictionary.Type.FOREST)) {
+        if(types.contains(BiomeDictionary.Type.WET) || types.contains(BiomeDictionary.Type.HOT) || types.contains(BiomeDictionary.Type.FOREST)) {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
             base.add(() -> ModConfiguredFeatures.PIXIE_PARASOL
                     .decorated(Features.Placements.HEIGHTMAP)
+                    .decorated(Placement.CHANCE.configured(new ChanceConfig(1)))
                     .decorated(Placement.COUNT_EXTRA.configured(
-                            new AtSurfaceWithExtraConfig(1, 0.25f, 1))));
+                            new AtSurfaceWithExtraConfig(1, 0.1f, 1))));
+        }
+
+        if(types.contains(BiomeDictionary.Type.WET) || types.contains(BiomeDictionary.Type.COLD) || types.contains(BiomeDictionary.Type.CONIFEROUS)) {
+            List<Supplier<ConfiguredFeature<?, ?>>> base =
+                    event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
+
+            base.add(() -> ModConfiguredFeatures.FROSTY_BONNET
+                    .decorated(Features.Placements.HEIGHTMAP)
+                    .decorated(Placement.CHANCE.configured(new ChanceConfig(1)))
+                    .decorated(Placement.COUNT_EXTRA.configured(
+                            new AtSurfaceWithExtraConfig(1, 0.1f, 1))));
+
+            base.add(() -> ModConfiguredFeatures.YELLOWLEG_BONNET
+                    .decorated(Features.Placements.HEIGHTMAP)
+                    .decorated(Placement.CHANCE.configured(new ChanceConfig(1)))
+                    .decorated(Placement.COUNT_EXTRA.configured(
+                            new AtSurfaceWithExtraConfig(1, 0.1f, 1))));
         }
     }
 }

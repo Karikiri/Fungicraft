@@ -14,6 +14,6 @@ public class HugeYellowlegBonnet extends Tree {
     @Nullable
     @Override
     protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getConfiguredFeature(Random random, boolean b) {
-        return ModConfiguredFeatures.Yellowleg_BONNET;
+        return ModConfiguredFeatures.YELLOWLEG_BONNET;
     }
 }

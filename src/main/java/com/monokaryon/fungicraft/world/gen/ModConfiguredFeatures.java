@@ -36,7 +36,7 @@ public class ModConfiguredFeatures {
                             new StraightTrunkPlacer(10, 2, 0),
                             new TwoLayerFeature(1, 0, 1))).ignoreVines().build()));
 
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> Yellowleg_BONNET =
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YELLOWLEG_BONNET =
             register("yellowleg_bonnet", Feature.TREE.configured((
                     new BaseTreeFeatureConfig.Builder(
                             new SimpleBlockStateProvider(ModBlocks.YELLOWLEG_BONNET_STEM.get().defaultBlockState()),
@@ -51,7 +51,7 @@ public class ModConfiguredFeatures {
             register("huge_mycena_fungi", Feature.RANDOM_SELECTOR.configured(
                     new MultipleRandomFeatureConfig(
                             ImmutableList.of(
-                                    Yellowleg_BONNET.weighted(0.2F),
+                                    YELLOWLEG_BONNET.weighted(0.2F),
                                     FROSTY_BONNET.weighted(0.2F)),
                             PIXIE_PARASOL))
                             .decorated(Features.Placements.HEIGHTMAP_SQUARE)

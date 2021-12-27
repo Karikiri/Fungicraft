@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "fungicraft:block/stripped_frosty_bonnet_hyphae",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "fungicraft:block/stripped_frosty_bonnet_hyphae"
+    },
+    "axis=z": {
+      "model": "fungicraft:block/stripped_frosty_bonnet_hyphae",
+      "x": 90
+    }
+  }
+}
