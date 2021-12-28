@@ -11,50 +11,43 @@
               "type": "minecraft:item",
               "conditions": [
                 {
-                  "condition": "minecraft:alternative",
-                  "terms": [
-                    {
-                      "condition": "minecraft:match_tool",
-                      "predicate": {
-                        "item": "minecraft:shears"
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
                       }
-                    },
-                    {
-                      "condition": "minecraft:match_tool",
-                      "predicate": {
-                        "enchantments": [
-                          {
-                            "enchantment": "minecraft:silk_touch",
-                            "levels": {
-                              "min": 1
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
+                    ]
+                  }
                 }
               ],
-              "name": "minecraft:frosty_bonnet_cap"
+              "name": "fungicraft:frosty_bonnet_cap"
             },
             {
               "type": "minecraft:item",
-              "conditions": [
+              "functions": [
                 {
-                  "condition": "minecraft:survives_explosion"
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": -6.0,
+                    "max": 2.0,
+                    "type": "minecraft:uniform"
+                  }
                 },
                 {
-                  "condition": "minecraft:table_bonus",
-                  "enchantment": "minecraft:fortune",
-                  "chances": [
-                    0.05,
-                    0.0625,
-                    0.083333336,
-                    0.1
-                  ]
+                  "function": "minecraft:limit_count",
+                  "limit": {
+                    "min": 0
+                  }
+                },
+                {
+                  "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "minecraft:frosty_bonnet_fungus"
+              "name": "fungicraft:frosty_bonnet_fungus"
             }
           ]
         }

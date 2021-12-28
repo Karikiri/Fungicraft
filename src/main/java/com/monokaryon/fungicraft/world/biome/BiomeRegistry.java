@@ -10,6 +10,9 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.ConfiguredRandomFeatureList;
+import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 import net.minecraftforge.client.event.sound.SoundEvent;
@@ -37,7 +40,7 @@ public class BiomeRegistry {
         //Mob
         DefaultBiomeFeatures.farmAnimals(mobspawninfo$builder);
         mobspawninfo$builder.addSpawn(EntityClassification.MONSTER,
-                new MobSpawnInfo.Spawners(EntityType.SLIME, 100, 7, 10));
+                new MobSpawnInfo.Spawners(EntityType.SLIME, 100, 7, 5));
         mobspawninfo$builder.addSpawn(EntityClassification.CREATURE,
                 new MobSpawnInfo.Spawners(EntityType.FOX, 10, 0, 1));
         DefaultBiomeFeatures.addDefaultMonsterRoom(biomegenerationsettings$builder);
@@ -45,7 +48,7 @@ public class BiomeRegistry {
 
         //Structure
         DefaultBiomeFeatures.addDefaultOverworldLandStructures(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.addDefaultLakes(biomegenerationsettings$builder);
+        biomegenerationsettings$builder.addFeature(GenerationStage.Decoration.LAKES, Features.LAKE_WATER);
         DefaultBiomeFeatures.addDefaultSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.addDefaultOres(biomegenerationsettings$builder);
         DefaultBiomeFeatures.addDefaultUndergroundVariety(biomegenerationsettings$builder);
@@ -59,8 +62,6 @@ public class BiomeRegistry {
         DefaultBiomeFeatures.addMountainTrees(biomegenerationsettings$builder);
         biomegenerationsettings$builder.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModConfiguredFeatures.HUGE_MYCENA_FUNGI);
 
-
-        //testing
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).biomeCategory(Biome.Category.FOREST)
                 .depth(depth).scale(scale).temperature(0.7F).downfall(0.8F)
                 .specialEffects((new BiomeAmbience.Builder()).waterColor(6920692).waterFogColor(12237047)

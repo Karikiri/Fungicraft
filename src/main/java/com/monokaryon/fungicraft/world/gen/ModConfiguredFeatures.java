@@ -21,9 +21,9 @@ public class ModConfiguredFeatures {
                             new SimpleBlockStateProvider(ModBlocks.PIXIE_PARASOL_STEM.get().defaultBlockState()),
                             new SimpleBlockStateProvider(ModBlocks.PIXIE_PARASOL_CAP.get().defaultBlockState()),
                             //radius | offset | height
-                            new BlobFoliagePlacer(FeatureSpread.of(10,5), FeatureSpread.fixed(0), 3),
+                            new BlobFoliagePlacer(FeatureSpread.of(4,2), FeatureSpread.fixed(0), 3),
                             //baseHeight | heightRandA | heightRandB
-                            new StraightTrunkPlacer(10, 5, 0),
+                            new StraightTrunkPlacer(6, 5, 2),
                             //limit | lowerSize | upperSize
                             new TwoLayerFeature(1, 0, 1))).ignoreVines().build()));
 
@@ -32,8 +32,8 @@ public class ModConfiguredFeatures {
                     new BaseTreeFeatureConfig.Builder(
                             new SimpleBlockStateProvider(ModBlocks.FROSTY_BONNET_STEM.get().defaultBlockState()),
                             new SimpleBlockStateProvider(ModBlocks.FROSTY_BONNET_CAP.get().defaultBlockState()),
-                            new BlobFoliagePlacer(FeatureSpread.of(5,2), FeatureSpread.fixed(0), 3),
-                            new StraightTrunkPlacer(10, 2, 0),
+                            new BlobFoliagePlacer(FeatureSpread.of(2,1), FeatureSpread.fixed(0), 3),
+                            new StraightTrunkPlacer(6, 2, 0),
                             new TwoLayerFeature(1, 0, 1))).ignoreVines().build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YELLOWLEG_BONNET =
@@ -41,8 +41,8 @@ public class ModConfiguredFeatures {
                     new BaseTreeFeatureConfig.Builder(
                             new SimpleBlockStateProvider(ModBlocks.YELLOWLEG_BONNET_STEM.get().defaultBlockState()),
                             new SimpleBlockStateProvider(ModBlocks.YELLOWLEG_BONNET_CAP.get().defaultBlockState()),
-                            new BlobFoliagePlacer(FeatureSpread.of(10,5), FeatureSpread.fixed(0), 3),
-                            new StraightTrunkPlacer(45, 20, 0),
+                            new BlobFoliagePlacer(FeatureSpread.of(4,2), FeatureSpread.fixed(0), 3),
+                            new StraightTrunkPlacer(20, 5, 0),
                             new TwoLayerFeature(1, 0, 1))).ignoreVines().build()));
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -51,7 +51,7 @@ public class ModConfiguredFeatures {
             register("huge_mycena_fungi", Feature.RANDOM_SELECTOR.configured(
                     new MultipleRandomFeatureConfig(
                             ImmutableList.of(
-                                    YELLOWLEG_BONNET.weighted(0.2F),
+                                    YELLOWLEG_BONNET.weighted(0.02F),
                                     FROSTY_BONNET.weighted(0.2F)),
                             PIXIE_PARASOL))
                             .decorated(Features.Placements.HEIGHTMAP_SQUARE)

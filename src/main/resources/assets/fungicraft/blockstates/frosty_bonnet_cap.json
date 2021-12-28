@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "fungicraft:blockfrosty_bonnet_cap"
+      "model": "fungicraft:block/frosty_bonnet_cap"
     }
   }
 }

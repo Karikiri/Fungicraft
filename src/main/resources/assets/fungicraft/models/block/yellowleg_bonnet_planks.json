@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "fungicraft:block/yellowleg_bonnet_planks"
+  }
+}

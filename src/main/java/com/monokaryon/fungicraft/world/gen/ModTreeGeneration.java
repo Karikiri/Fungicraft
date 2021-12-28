@@ -28,9 +28,8 @@ public class ModTreeGeneration {
 
             base.add(() -> ModConfiguredFeatures.PIXIE_PARASOL
                     .decorated(Features.Placements.HEIGHTMAP)
-                    .decorated(Placement.CHANCE.configured(new ChanceConfig(1)))
                     .decorated(Placement.COUNT_EXTRA.configured(
-                            new AtSurfaceWithExtraConfig(1, 0.1f, 1))));
+                            new AtSurfaceWithExtraConfig(1, 0.001f, 1))));
         }
 
         if(types.contains(BiomeDictionary.Type.WET) || types.contains(BiomeDictionary.Type.COLD) || types.contains(BiomeDictionary.Type.CONIFEROUS)) {

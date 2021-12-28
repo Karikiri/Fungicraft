@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "fungicraft:block/yellowleg_bonnet_stem_top",
+    "side": "fungicraft:block/yellowleg_bonnet_stem"
+  }
+}

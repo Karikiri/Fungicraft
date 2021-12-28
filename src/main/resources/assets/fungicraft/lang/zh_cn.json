@@ -1,12 +1,29 @@
 {
   "item.fungicraft.agar_powder": "琼脂粉沫",
 
-  "block.fungicraft.pixie_parasol_stem": "炫蓝蘑菇菌柄",
-  "block.fungicraft.stripped_pixie_parasol_stem": "去皮炫蓝蘑菇菌柄",
-  "block.fungicraft.pixie_parasol_hyphae": "炫蓝蘑菇菌核",
-  "block.fungicraft.stripped_pixie_parasol_hyphae": "去皮炫蓝蘑菇菌核",
-  "block.fungicraft.pixie_parasol_cap": "炫蓝蘑菇菌盖",
-  "block.fungicraft.pixie_parasol_fungus": "炫蓝蘑菇",
+  "block.fungicraft.pixie_parasol_stem": "炫蓝小菇菌柄",
+  "block.fungicraft.stripped_pixie_parasol_stem": "去皮炫蓝小菇菌柄",
+  "block.fungicraft.pixie_parasol_hyphae": "炫蓝小菇菌核",
+  "block.fungicraft.stripped_pixie_parasol_hyphae": "去皮炫蓝小菇菌核",
+  "block.fungicraft.pixie_parasol_cap": "炫蓝小菇菌盖",
+  "block.fungicraft.pixie_parasol_fungus": "炫蓝小菇",
+  "block.fungicraft.pixie_parasol_planks": "炫蓝小菇木板",
 
-  "itemGroup.fungicraftModTab": "真菌模组"
+  "block.fungicraft.frosty_bonnet_stem": "霜白小菇菌柄",
+  "block.fungicraft.stripped_frosty_bonnet_stem": "去皮霜白小菇菌柄",
+  "block.fungicraft.frosty_bonnet_hyphae": "霜白小菇菌核",
+  "block.fungicraft.stripped_frosty_bonnet_hyphae": "去皮霜白小菇菌核",
+  "block.fungicraft.frosty_bonnet_cap": "霜白小菇菌盖",
+  "block.fungicraft.frosty_bonnet_fungus": "霜白小菇",
+  "block.fungicraft.frosty_bonnet_planks": "霜白小菇木板",
+
+  "block.fungicraft.yellowleg_bonnet_stem": "黄柄小菇菌柄",
+  "block.fungicraft.stripped_yellowleg_bonnet_stem": "去皮黄柄小菇菌柄",
+  "block.fungicraft.yellowleg_bonnet_hyphae": "黄柄小菇菌核",
+  "block.fungicraft.stripped_yellowleg_bonnet_hyphae": "去皮黄柄小菇菌核",
+  "block.fungicraft.yellowleg_bonnet_cap": "黄柄小菇菌盖",
+  "block.fungicraft.yellowleg_bonnet_fungus": "黄柄小菇",
+  "block.fungicraft.yellowleg_bonnet_planks": "黄柄小菇木板",
+
+  "itemGroup.fungicraftModTab": "巨大真菌模组"
 }

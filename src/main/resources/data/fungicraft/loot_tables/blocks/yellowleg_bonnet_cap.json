@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "fungicraft:pixie_parasol_cap"
+              "name": "fungicraft:yellowleg_bonnet_cap"
             },
             {
               "type": "minecraft:item",
@@ -47,7 +47,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "fungicraft:pixie_parasol_fungus"
+              "name": "fungicraft:yellowleg_bonnet_fungus"
             }
           ]
         }
